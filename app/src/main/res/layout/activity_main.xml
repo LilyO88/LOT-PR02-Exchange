@@ -19,7 +19,7 @@
         android:id="@+id/txtAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hintAmount"
+        android:text="@string/textAmount"
         style="@style/StyleEditText"
         />
 
@@ -60,7 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_euro"/>
     </RadioGroup>
 
     <TextView
@@ -100,7 +101,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dollar"/>
     </RadioGroup>
 
     <Button

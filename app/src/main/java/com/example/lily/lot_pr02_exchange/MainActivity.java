@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 import java.util.concurrent.TimeUnit;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     private RadioGroup rgFromCurrency;
     private RadioGroup rgToCurrency;
@@ -55,19 +55,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnExchange = findViewById(R.id.btnExchange);
         txtAmount = findViewById(R.id.txtAmount);
 
-        btnExchange.setOnClickListener(this);
+        btnExchange.setOnClickListener(v -> exchange(v));
+        txtAmount.setOnClickListener(v -> exchange(v));
         rgFromCurrency.setOnCheckedChangeListener(this);
         rgToCurrency.setOnCheckedChangeListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.btnExchange) {
-            if(Double.parseDouble(txtAmount.getText().toString()) != 0){
+    private void exchange(View view) {
+        if (view.getId() == R.id.btnExchange
+                && !txtAmount.getText().toString().isEmpty()
+                && !txtAmount.getText().toString().equals(".")) {
+            if (Double.parseDouble(txtAmount.getText().toString()) != 0) {
                 calculateChange();
             }
+            reset();
+        } else if (view.getId() == R.id.txtAmount) {
+            txtAmount.selectAll();
+        } else if(txtAmount.getText().toString().equals(".")) {
+            reset();
         }
-        reset();
     }
 
     private void calculateChange() {

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LOT-PR02-Exchange</string>
     <string name="main_amount">Amount</string>
-    <string name="hintAmount">0.00</string>
+    <string name="textAmount">0.00</string>
     <string name="dollar">Dollar</string>
     <string name="euro">Euro</string>
     <string name="pound">Pound</string>
