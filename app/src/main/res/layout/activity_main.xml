@@ -15,6 +15,8 @@
         android:text="@string/main_amount"
         style="@style/MarginTop"
         />
+    <!-- USA EL ATRIBUTO android:selectAllOnFocus PARA QUE SE SELECCIONE AL COMPLETO
+         EL TEXTO CUANDO GANE EL FOCO -->
     <EditText
         android:id="@+id/txtAmount"
         android:layout_width="match_parent"
@@ -55,6 +57,8 @@
             android:layout_height="wrap_content"
             android:text="@string/pound"
             style="@style/MarginsRButton"/>
+        <!-- SIEMPRE QUE USES UN ImageView DEFINE EL ATRIBUTO android:contentDescription CON LA
+             DESCRIPCIÓN TEXTUAL DE LA IMAGEN MOSTRADA -->
         <ImageView
             android:id="@+id/imgFrom"
             android:layout_width="wrap_content"
@@ -64,6 +68,7 @@
             android:src="@drawable/ic_euro"/>
     </RadioGroup>
 
+    <!-- NO USES LITERALES DE CADENA. DEFINE RECURSOS DE CADENA -->
     <TextView
         android:id="@+id/lblTo"
         android:layout_width="match_parent"
