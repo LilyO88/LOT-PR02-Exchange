@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- ESTA IDEA ES MUY BUENA, PERO YO NO INCLUIRÍA EN EL ESTILO
+    ATRIBUTOS RELACIONADOS CON LA POSICION DE LA VISTA, COMO POR EJEMPLO LOS MÁRGENES.
+    EL OBJETIVO DE DEFINIR ESTILOS ES REUSARLOS Y CON EL TAMAÑO VA A SER DIFÍCIL.
+    EN CUALQUIER CASO NO USES LITERALES DE CANTIDAD, DEFINE RECURSOS DE DIMENSIÓN -->
     <style name="StyleEditText" parent="Theme.AppCompat.Light">
         <item name="android:textSize">20sp</item>
         <item name="android:gravity">end</item>
@@ -18,6 +22,7 @@
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
     </style>
+    <!-- EMPLEA LOS ATRIBUTOS ...Start EN VEZ DE ...Left Y ...End EN VEZ DE ...Right -->
     <style name="MarginTop" parent="Theme.AppCompat.Light">
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginLeft">16dp</item>
@@ -30,6 +35,7 @@
         <item name="android:layout_marginRight">16dp</item>
     </style>
 
+    <!-- ESTOS DOS ESTILOS SON IGUAL. DEFINE SÓLO UNO Y ÚSALO EN VARIOS SITIOS -->
     <style name="MarginsLateral" parent="Theme.AppCompat.Light">
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
